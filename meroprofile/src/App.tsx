@@ -21,8 +21,8 @@
         <Navbar />
 
         <Hero/>
-        <Project />
         <About />
+        <Project />
         <Skills />
         <Experience />
         <Education />

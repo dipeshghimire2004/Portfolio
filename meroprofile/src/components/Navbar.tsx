@@ -41,7 +41,7 @@ const Navbar: React.FC = () => {
         
           <button 
           onClick={toggleDarkMode}
-          className='bg-gray-300 dark:bg-gray-600 px-4 py-2 rounded-full'>
+         >
             {/* {isDarkMode ?<MdLightMode />:<MdOutlineLightMode />} */}
             {isDarkMode ?"🌙":"🔆"}
           </button>
@@ -59,7 +59,7 @@ const Navbar: React.FC = () => {
               {NAVIGATION_LINKS.map((item, index) => (
                 <li key={index}>
                   <a
-                    className="text-md hover:text-blue-400"
+                    className="text-md hover:text-green-500"
                     href={item.href}
                     onClick={(e) => handleClick(e, item.href)}
                   >
@@ -87,13 +87,13 @@ const Navbar: React.FC = () => {
         <div
           className={`md:hidden ${
             isOpen ? 'block' : 'hidden'
-          } absolute top-14 bg-white shadow-lg w-full`}
+          } absolute top-14 bg-white dark:bg-black shadow-lg w-full`}
         >
           <ul className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {NAVIGATION_LINKS.map((item, index) => (
               <li key={index}>
                 <a
-                  className="text-sm block hover:text-blue-400"
+                  className="text-sm block hover:text-green-500"
                   href={item.href}
                   onClick={(e) => handleClick(e, item.href)}
                 >

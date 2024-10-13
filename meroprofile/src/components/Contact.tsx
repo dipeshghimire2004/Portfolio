@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import { Toaster, toast } from 'react-hot-toast';
 import emailjs from 'emailjs-com';
+import { BsSendFill } from "react-icons/bs";
+
 
 interface IFormInput {
   name: string;
@@ -28,13 +30,13 @@ const Contact: React.FC = () => {
   const onSubmit: SubmitHandler<IFormInput> = (data) => {
     setIsSending(true);
 
-    // Send email using EmailJS
+
     emailjs
       .send(
-        'service_mq9puoj', // Replace with your EmailJS Service ID
-        'template_kravrr6', // Replace with your EmailJS Template ID
+        'service_mq9puoj', 
+        'template_kravrr6', 
         data,
-        '5Nvz5sJ_LOyhcbzcI' // Replace with your EmailJS User ID (or Public Key)
+        '5Nvz5sJ_LOyhcbzcI'
       )
       .then(
         () => {
@@ -57,9 +59,9 @@ const Contact: React.FC = () => {
         Contact Us
       </h1>
       <form onSubmit={handleSubmit(onSubmit)} className="w-full">
-        {/* Name & Email Fields */}
+
         <div className="flex flex-col sm:flex-row sm:space-x-4 space-y-4 sm:space-y-0 mb-4">
-          {/* Name Field */}
+
           <div className="flex-1">
             <input
               id="name"
@@ -71,7 +73,7 @@ const Contact: React.FC = () => {
             />
             {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
           </div>
-          {/* Email Field */}
+
           <div className="flex-1">
             <input
               id="email"
@@ -91,7 +93,7 @@ const Contact: React.FC = () => {
             {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
           </div>
         </div>
-        {/* Feedback Field */}
+
         <div className="mb-4">
           <textarea
             id="feedback"
@@ -104,16 +106,18 @@ const Contact: React.FC = () => {
           ></textarea>
           {errors.feedback && <p className="text-red-500 text-sm mt-1">{errors.feedback.message}</p>}
         </div>
-        {/* Submit Button */}
+
         <button
           type="submit"
-          className={`w-full py-3 px-4 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-300 ${
+          className={` py-3 px-4 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-300 ${
             isSending ? 'opacity-50 cursor-not-allowed' : ''
           }`}
           disabled={isSending}
         >
-          {isSending ? 'Sending...' : 'Submit'}
+          {isSending ? 'Sending...' : 'Send'}
+          <BsSendFill className='inline ml-2'/>
         </button>
+       
       </form>
     </section>
   );
