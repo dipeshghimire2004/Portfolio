@@ -11,8 +11,7 @@ interface HeroData {
 }
 
 const Hero: React.FC = () => {
-  const heroRef = useRef<HTMLDivElement>(null); // Create a ref for the hero section
-
+  const heroRef = useRef<HTMLDivElement>(null); 
   useEffect(() => {
     createCircles(); // Call the function to create animations
   }, []);
