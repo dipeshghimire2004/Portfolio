@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { NAVIGATION_LINKS } from '../constants';
-import DGlogo from '../assets/images/DGlogo.png';
+import DGlogo from '../assets/images/logodg.png';
 import { TiThMenu } from 'react-icons/ti';
 import useDarkMode from './hooks/useDarkMode';
-import { MdLightMode,MdOutlineLightMode } from "react-icons/md";
 import Resume from '../assets/929p.pdf'
 
 const Navbar: React.FC = () => {
@@ -35,7 +34,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <div className="bg-white dark:bg-gray-900 shadow-lg font-poppins fixed top-0 z-50">
+    <div className="bg-white dark:bg-gray-900 dark:text-white shadow-lg font-poppins fixed top-0 z-50">
       <div className="flex max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center gap-6 h-14">
         
@@ -49,7 +48,7 @@ const Navbar: React.FC = () => {
 
           <div>
             <a href="#">
-              <img src={DGlogo} width={150} height={150} alt="Dipesh Ghimire Logo" />
+              <img src={DGlogo} className='w-20' alt="Dipesh Ghimire Logo" />
             </a>
           </div>
 

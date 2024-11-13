@@ -15,7 +15,7 @@ const Project: React.FC = () => {
         {PROJECTS.map((project) => (
           <motion.div
             key={project.id}
-            className="relative flex flex-col text-center items-center p-12 m-5 justify-between border rounded-xl shadow-xl overflow-hidden transition-all duration-500"
+            className="relative flex flex-col  items-center p-12 m-5 justify-between border rounded-xl shadow-xl overflow-hidden transition-all duration-500"
             whileHover={{
               scale: 1.03,
               rotateX: 1,
@@ -25,10 +25,10 @@ const Project: React.FC = () => {
             transition={{ type: 'spring', stiffness: 120, damping: 12 }}
           >
 
-            <h1 className="text-2xl font-semibold  pb-4">{project.name}</h1>
+            <h1 className="text-2xl font-extrabold border-b-2 shadow-2xl  px-4 py-2 rounded-full">{project.name}</h1>
 
 
-            <p className=" text-center mb-6">{project.description}</p>
+            <p className="  my-6">{project.description}</p>
 
 
             <motion.a

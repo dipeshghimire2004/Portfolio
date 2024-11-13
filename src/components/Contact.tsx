@@ -30,12 +30,16 @@ const Contact: React.FC = () => {
   const onSubmit: SubmitHandler<IFormInput> = (data) => {
     setIsSending(true);
 
-
+    const payload: Record<string, unknown> = {
+      name: data.name,
+      email: data.email,
+      feedback: data.feedback,
+    }
     emailjs
       .send(
         'service_mq9puoj', 
         'template_kravrr6', 
-        data,
+        payload,
         '5Nvz5sJ_LOyhcbzcI'
       )
       .then(

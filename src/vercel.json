@@ -1,0 +1,9 @@
+{
+    "builds": [
+      {
+        "src": "portfolio/meroprofile/build/**/*",
+        "use": "@vercel/static"
+      }
+    ]
+  }
+  

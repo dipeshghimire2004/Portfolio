@@ -117,7 +117,7 @@ import {
     {
       icon: <RiJavaFill className="text-4xl text-sky-700 lg:text-5xl" />,
       name: "Java",
-      experience: "1+ year",
+      experience: "6+ Months",
     },
   ];
   
