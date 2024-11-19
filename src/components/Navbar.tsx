@@ -3,7 +3,7 @@ import { NAVIGATION_LINKS } from '../constants';
 import DGlogo from '../assets/images/logodg.png';
 import { TiThMenu } from 'react-icons/ti';
 import useDarkMode from './hooks/useDarkMode';
-import Resume from '../assets/929p.pdf'
+import Resume from '../assets/DipeshGhimireCV.pdf'
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
