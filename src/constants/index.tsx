@@ -125,9 +125,9 @@ import {
     {
       title: "Junior Web Developer",
       company: "Dev-Corp Herald College Kathmandu",
-      duration: "July 2024 - Present",
+      duration: "July 2024 - September 2024",
       description:
-        "In my role as a Junior Web Developer, I assisted in the development and maintenance of various web applications. I gained hands-on experience in utilizing reactJS, Taiwind, NextJS, Shadcn to create user-friendly interfaces. I actively participated in team meetings, contributed to project planning, and collaborated with senior developers to implement new features.",
+        "As a junior developer, I have assisted  in the development and maintenance of various web pages. I gained hands-on experience in React Js, Tailwind CSS, Shadcn and NextJS to create user friendly interfaces.I take active participation in team meetings, where ideas are pitched to make the system as per the system requirement specification.",
     },
     {
       title: "On-The Job Traning",
@@ -140,19 +140,20 @@ import {
   
   export const EDUCATION = [
     {
+      degree: "BC's (Hons)  Computer Science ",
+      institution: "Herald College Kathmandu",
+      duration: "September 2024 - Present",
+      description:
+        "Focused on programming, especially on web development, where I have indulged myself into different programming languages i.e. Java, Javascript, Typescript, python, Django, React, PHP. Participate  in the contribution to the web development community. ",
+    },
+    {
       degree: "+12 'Computer Engineering",
-      institution: "Shree SIddhababa Sec. School",
+      institution: "Shree Siddhababa Sec. School",
       duration: "2019-2023",
       description:
         "Overview of contemporary technology along with development process. Completed a SRS on enhancing user experience in web applications through advanced interactive techniques. Participated in various projects involving frontend development,Research, and data structures upto certain extents. Graduated with honors.",
     },
-    {
-      degree: "BS'c (Hons)  Computer Science ",
-      institution: "Herald College Kathmandu",
-      duration: "September 2008 - June 2012",
-      description:
-        "Focused on web development, programming languages, and database management. Actively involved in coding clubs and Devlopment Community, where I developed web applications using HTML, CSS, JavaScript,react, Tailwind, NextJS,AppWrite and PHP. Completed a senior project on developing an Workshop Tracking of Herald College.",
-    },
+   
   ];
   
   export const GITHUB=[
