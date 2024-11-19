@@ -151,7 +151,7 @@ import {
       institution: "Shree Siddhababa Sec. School",
       duration: "2019-2023",
       description:
-        "Overview of contemporary technology along with development process. Completed a SRS on enhancing user experience in web applications through advanced interactive techniques. Participated in various projects involving frontend development,Research, and data structures upto certain extents. Graduated with honors.",
+        "Privileged to explore the IT world in the early age, Overview of contemporary technology along with the development of systems, web application, Mobile app with proper planning for sustainable system.",
     },
    
   ];
