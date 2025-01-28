@@ -1,18 +1,31 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
-  darkMode:'class',
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class",
   theme: {
     extend: {
-      fontFamily:{
-        poppins:['Poppins', 'sans-serif'],
-        roboto:['Roboto','sans-serif'],
-      }
+      keyframes: {
+        slide: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+      },
+      animation: {
+        slide: "slide 30s linear infinite",
+      },
+      fontFamily: {
+        poppins: ["Poppins", "sans-serif"],
+        roboto: ["Roboto", "sans-serif"],
+      },
     },
   },
-  plugins: [],
-}
-
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        ".animation-paused": {
+          "animation-play-state": "paused",
+        },
+      });
+    },
+  ],
+};

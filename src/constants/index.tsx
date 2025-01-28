@@ -7,12 +7,17 @@ import {
     FaInstagram,
   } from "react-icons/fa6";
   
-  import projectImage1 from "../assets/images/project1.jpeg";
-  import projectImage2 from "../assets/images/project2.jpeg";
-  import projectImage3 from "../assets/images/project3.jpeg";
-  import projectImage4 from "../assets/images/project4.jpeg";
-  import projectImage5 from '../assets/images/project5.jpeg';
-  
+  import taskmanagement from "../assets/images/taskman2.webp";
+  import doctorappointment from "../assets/images/doctotappointment.webp";
+  import todo from "../assets/images/todo.jpg";
+  import weather from "../assets/images/weather.webp";
+  import blogapp from '../assets/images/blogapp.webp';
+  import portfolio from '../assets/images/portfolio.webp';
+  import ecommerce from '../assets/images/ecommercewebsiste.png';
+  import tweet from '../assets/images/tweet.webp';
+
+
+
   import { RiReactjsLine } from "react-icons/ri";
   import { SiPhp } from "react-icons/si";
   import { BiLogoFigma } from "react-icons/bi";
@@ -40,10 +45,10 @@ import {
   export const PROJECTS = [
     {
       id: 1,
-      name: "Personal Portfolio",
+      name: "Task Management System",
       description:
-        "A personal portfolio website built with React and Tailwind CSS to showcase my skills, projects, and contact information.",
-      image: projectImage1,
+        "This project is a full-stack project, Django + ReactJS with typescript and Tailwind CSS to manage the task and ensure its completion within given time.",
+      image: taskmanagement,
       githubLink: "",
     },
     {
@@ -51,23 +56,23 @@ import {
       name: "Doctor Appointent System",
       description:
         "Doctor Appointent Boooking System web application developed using react.js, allows patients to easily schedule, reschedule, or cancel appointments with doctors",
-      image: projectImage2,
+      image: doctorappointment,
       githubLink: "https://github.com/dipeshghimire2004/Doctor-Appointment-System",
     },
     {
       id: 3,
-      name: "To Do List",
+      name: "Hamro Sewa",
       description:
-        "A task management application built with React and Redux for efficient task tracking and team collaboration, including features like project boards,and task assignment.",
-      image: projectImage3,
-      githubLink: "https://github.com/dipeshghimire2004/To-Do-List",
+        "E-Commerce application built with React with typescript where it comprise of authentication system, also Redux for efficient task tracking and team collaboration.",
+      image: ecommerce,
+      githubLink: "https://github.com/dipeshghimire2004/Hamro-Sewa",
     },
     {
       id: 4,
       name: "Weather App",
       description:
         "A weather application that uses the OpenWeatherMap API to fetch and display current weather data and forecasts for various locations, built with Javascript and CSS.",
-      image: projectImage4,
+      image:weather,
       githubLink: "https://github.com/user/weather-app",
     },
     {
@@ -75,20 +80,47 @@ import {
       name: "My-Blog-App",
       description:
         "A blog app using React and Appwrite leverages React for the front end and Appwrite for backend services, and Tailwind CSS for resposive design, allows you to post your blog with Rich-Text-Editor. ",
-      image: projectImage5,
+      image:blogapp,
       githubLink: "https://github.com/dipeshghimire2004/My-Blog-App",
+    },
+    {
+      id: 6,
+      name: "Personal Portfolio",
+      description:
+        "A personal portfolio website built with React and Tailwind CSS to showcase my skills, projects, and contact information.",
+      image: portfolio,
+      githubLink: "",
+    },
+    {
+      id: 7,
+      name: "To Do List",
+      description:
+        "A task management application built with React and Redux for efficient task tracking and team collaboration, including features like project boards,and task assignment.",
+      image: todo,
+      githubLink: "https://github.com/dipeshghimire2004/To-Do-List",
+    },
+    {
+      id: 8,
+      name: "Hamro Tweet",
+      description:
+        "It is a full-stack project built using Django and HTML CSS. Allow user to create post, and perform crud operation.",
+      image: tweet,
+      githubLink: "https://github.com/dipeshghimire2004/HamroTweet",
     },
   ];
   
   export const BIO = [
-    "Hi, I’m Dipesh Ghimire, a Computer Engineering graduate from Shree Siddhababa Secondary School. After my studies, I focused on growing my skills in frontend development to bring creative and innovative ideas to life.",
+    "Hi, I’m Dipesh Ghimire, a Computer Engineering graduate from Shree Siddhababa Secondary School with a passion for frontend development. In 2023, I worked with Suresh Khanal on computer hardware, software, and networking, enhancing my technical skills."
 
-    "In 2023, I worked with Suresh Khanal on maintaining computer hardware, software, and networking issues. My passion for creating great user experiences has kept me involved in various development platforms."
-    
-    ,"As a frontend developer, I have a strong background in HTML, CSS, and JavaScript, along with experience in library like React . I aim to deliver visually appealing and user-friendly web experiences for everyone I work with."
+,"With expertise in HTML, CSS, JavaScript, and React, I focus on delivering creative, user-friendly, and visually appealing web experiences."
   ];
   
   export const SKILLS = [
+    {
+      icon: <TbBrandJavascript className="text-4xl text-green-600 lg:text-5xl" />,
+      name: "Javascript",
+      experience: "1.5+ years",
+    },
     {
       icon: <RiReactjsLine className="text-4xl text-cyan-400 lg:text-5xl" />,
       name: "React",
@@ -104,11 +136,7 @@ import {
       name: "Figma",
       experience: "1+ year",
     },
-    {
-      icon: <TbBrandJavascript className="text-4xl text-green-600 lg:text-5xl" />,
-      name: "Javascript",
-      experience: "1+ years",
-    },
+    
     {
       icon: <FaPython className="text-4xl text-green-600 lg:text-5xl" />,
       name: "Python",

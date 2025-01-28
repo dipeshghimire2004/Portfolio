@@ -22,7 +22,7 @@ const Skills:React.FC = () => {
     viewport={{once:true}}
 
     className="container mx-auto mt-4" id="skills">
-        <h2 className="text-4xl flex justify-center md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-8">
+        <h2 className="text-4xl flex justify-center md:text-4xl font-bold text-green-500 mb-8">
             Skills
         </h2>
         <div

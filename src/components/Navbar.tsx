@@ -4,6 +4,7 @@ import DGlogo from '../assets/images/logodg.png';
 import { TiThMenu } from 'react-icons/ti';
 import useDarkMode from './hooks/useDarkMode';
 import Resume from '../assets/DipeshGhimireCV.pdf'
+import { BsDownload } from "react-icons/bs";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -27,7 +28,8 @@ const Navbar: React.FC = () => {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth',
+        behavior:'smooth',
+        
       });
       setIsOpen(false);
     }
@@ -68,7 +70,10 @@ const Navbar: React.FC = () => {
               ))}
             </ul>
           </div>
-          <a href={Resume} download className='button bg-green-500 px-4 py-1 rounded-xl'>Resume</a>
+          <div className='flex items-center bg-green-500 rounded-xl gap-2 px-4 py-1'>
+            <a href={Resume} download className='button '>Resume</a>
+            <BsDownload />  
+          </div>
 
         
           <div className="md:hidden">

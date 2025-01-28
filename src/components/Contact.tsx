@@ -59,7 +59,7 @@ const Contact: React.FC = () => {
   return (
     <section id="contact" className="p-4 lg:w-1/2 w-full mx-auto border border-stone-100/30 rounded-xl flex flex-col items-center justify-center">
       <Toaster position="top-center" reverseOrder={false} />
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-6 sm:mb-8">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-500 mb-6 sm:mb-8">
         Contact Us
       </h1>
       <form onSubmit={handleSubmit(onSubmit)} className="w-full">

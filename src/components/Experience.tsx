@@ -22,7 +22,8 @@ const Experiences:React.FC = () => {
     viewport={{once:true}}
 
     className="pt-20" id="work">
-         <h1 className="text-4xl md:text-6xl flex  justify-center text-center font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 mb-8">Work Experience</h1>
+         <h1 className="text-2xl md:text-4xl flex  justify-center text-center font-bold text-transparent bg-clip-text bg-gradient-to-r
+          from-blue-500 via-green-500 to-pink-500 mb-8">Work Experience</h1>
         <div className="space-y-8 p-10">
             {EXPERIENCES.map((experience,index)=>(
                 <motion.div
