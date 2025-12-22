@@ -4,6 +4,14 @@ export default {
   darkMode: "class",
   theme: {
     extend: {
+      colors: {
+        brand: {
+          green: "#00843D", // Nepal flag border/mountains green
+          red: "#DC143C",   // Crimson Red (Nepal Flag)
+          white: "#FFFFFF",
+          dark: "#1A1A1A",
+        }
+      },
       keyframes: {
         slide: {
           "0%": { transform: "translateX(0)" },

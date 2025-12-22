@@ -3,7 +3,7 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import { Toaster, toast } from 'react-hot-toast';
 import emailjs from 'emailjs-com';
 import { BsSendFill } from "react-icons/bs";
-
+import { motion } from 'framer-motion';
 
 interface IFormInput {
   name: string;
@@ -37,8 +37,8 @@ const Contact: React.FC = () => {
     }
     emailjs
       .send(
-        'service_mq9puoj', 
-        'template_kravrr6', 
+        'service_mq9puoj',
+        'template_kravrr6',
         payload,
         '5Nvz5sJ_LOyhcbzcI'
       )
@@ -57,9 +57,13 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="p-4 lg:w-1/2 w-full mx-auto border border-stone-100/30 rounded-xl flex flex-col items-center justify-center">
+    <motion.section
+      initial={{ opacity: 0, scale: 0.9 }}
+      whileHover={{ opacity: 1, scale: 1 }}
+      whileInView={{ opacity: 1, scale: 1, transition: { duration: 0.8 } }}
+      id="contact" className="p-8 lg:w-1/2 w-full mx-auto border border-stone-200 dark:border-stone-800 bg-white dark:bg-brand-dark rounded-xl flex flex-col items-center justify-center shadow-md">
       <Toaster position="top-center" reverseOrder={false} />
-      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-green-500 mb-6 sm:mb-8">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-brand-green mb-8">
         Contact Us
       </h1>
       <form onSubmit={handleSubmit(onSubmit)} className="w-full">
@@ -70,9 +74,8 @@ const Contact: React.FC = () => {
             <input
               id="name"
               {...register('name', { required: 'Name is required', maxLength: 20 })}
-              className={`w-full bg-transparent border border-stone-50/30 rounded-xl px-4 py-3 focus:outline-none ${
-                errors.name ? 'border-red-500' : 'border-gray-300'
-              }`}
+              className={`w-full bg-transparent border border-stone-50/30 rounded-xl px-4 py-3 focus:outline-none ${errors.name ? 'border-red-500' : 'border-gray-300'
+                }`}
               placeholder="Enter your name"
             />
             {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
@@ -89,9 +92,8 @@ const Contact: React.FC = () => {
                   message: 'Enter a valid email address',
                 },
               })}
-              className={`w-full bg-transparent border border-stone-50/30 rounded-xl px-4 py-3 focus:outline-none ${
-                errors.email ? 'border-red-500' : 'border-gray-300'
-              }`}
+              className={`w-full bg-transparent border border-stone-50/30 rounded-xl px-4 py-3 focus:outline-none ${errors.email ? 'border-red-500' : 'border-gray-300'
+                }`}
               placeholder="Enter your email"
             />
             {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
@@ -102,9 +104,8 @@ const Contact: React.FC = () => {
           <textarea
             id="feedback"
             {...register('feedback', { required: 'Feedback is required', minLength: 10 })}
-            className={`w-full bg-transparent border border-stone-50/30 rounded-xl p-4 focus:outline-none ${
-              errors.feedback ? 'border-red-500' : 'border-gray-300'
-            }`}
+            className={`w-full bg-transparent border border-stone-50/30 rounded-xl p-4 focus:outline-none ${errors.feedback ? 'border-red-500' : 'border-gray-300'
+              }`}
             rows={4}
             placeholder="Enter your feedback"
           ></textarea>
@@ -113,17 +114,16 @@ const Contact: React.FC = () => {
 
         <button
           type="submit"
-          className={` py-3 px-4 bg-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-300 ${
-            isSending ? 'opacity-50 cursor-not-allowed' : ''
-          }`}
+          className={`w-full py-4 px-6 bg-brand-green text-white font-bold rounded-lg hover:bg-brand-red transition duration-300 shadow-sm ${isSending ? 'opacity-50 cursor-not-allowed' : ''
+            }`}
           disabled={isSending}
         >
-          {isSending ? 'Sending...' : 'Send'}
-          <BsSendFill className='inline ml-2'/>
+          {isSending ? 'Sending...' : 'Send Message'}
+          <BsSendFill className='inline ml-2' />
         </button>
-       
+
       </form>
-    </section>
+    </motion.section>
   );
 };
 

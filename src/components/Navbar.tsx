@@ -1,14 +1,15 @@
-import React, { useState } from 'react';
-import { NAVIGATION_LINKS } from '../constants';
-import DGlogo from '../assets/images/logodg.png';
-import { TiThMenu } from 'react-icons/ti';
-import useDarkMode from './hooks/useDarkMode';
-import Resume from '../assets/DipeshGhimireCV.pdf'
+import React, { useState } from "react";
+import { NAVIGATION_LINKS } from "../constants";
+import DGlogo from "../assets/images/logodg.png";
+import { TiThMenu } from "react-icons/ti";
+import useDarkMode from "./hooks/useDarkMode";
+// import Resume from "../assets/DipeshGhimireCV.pdf";
+import Resume from "../assets/Dipesh_Ghimire_CV.pdf";
 import { BsDownload } from "react-icons/bs";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
-  const {isDarkMode, toggleDarkMode}=useDarkMode();
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   const toggleMobileMenu = () => {
     setIsOpen(!isOpen);
@@ -28,8 +29,7 @@ const Navbar: React.FC = () => {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior:'smooth',
-        
+        behavior: "smooth",
       });
       setIsOpen(false);
     }
@@ -39,28 +39,20 @@ const Navbar: React.FC = () => {
     <div className="bg-white dark:bg-gray-900 dark:text-white shadow-lg font-poppins fixed top-0 z-50">
       <div className="flex max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center gap-6 h-14">
-        
-          <button 
-          onClick={toggleDarkMode}
-         >
-          
-            {isDarkMode ?"🌙":"🔆"}
-          </button>
-
+          <button onClick={toggleDarkMode}>{isDarkMode ? "🌙" : "🔆"}</button>
 
           <div>
             <a href="#">
-              <img src={DGlogo} className='w-20' alt="Dipesh Ghimire Logo" />
+              <img src={DGlogo} className="w-20" alt="Dipesh Ghimire Logo" />
             </a>
           </div>
-
 
           <div className="hidden md:flex space-x-4">
             <ul className="flex items-center gap-4">
               {NAVIGATION_LINKS.map((item, index) => (
                 <li key={index}>
                   <a
-                    className="text-md hover:text-green-500"
+                    className="text-md font-medium hover:text-brand-green transition-colors duration-300"
                     href={item.href}
                     onClick={(e) => handleClick(e, item.href)}
                   >
@@ -70,12 +62,13 @@ const Navbar: React.FC = () => {
               ))}
             </ul>
           </div>
-          <div className='flex items-center bg-green-500 rounded-xl gap-2 px-4 py-1'>
-            <a href={Resume} download className='button '>Resume</a>
-            <BsDownload />  
+          <div className="flex items-center bg-brand-green text-white rounded-lg gap-2 px-6 py-2 hover:bg-brand-red transition-colors duration-300 shadow-sm">
+            <a href={Resume} download className="button font-medium">
+              Resume
+            </a>
+            <BsDownload />
           </div>
 
-        
           <div className="md:hidden">
             <button
               onClick={toggleMobileMenu}
@@ -89,15 +82,14 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`md:hidden ${
-            isOpen ? 'block' : 'hidden'
-          } absolute top-14 bg-white dark:bg-black shadow-lg w-full`}
+          className={`md:hidden ${isOpen ? "block" : "hidden"
+            } absolute top-14 bg-white dark:bg-black shadow-lg w-full`}
         >
           <ul className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {NAVIGATION_LINKS.map((item, index) => (
               <li key={index}>
                 <a
-                  className="text-sm block hover:text-green-500"
+                  className="text-sm block hover:text-brand-green font-medium py-2"
                   href={item.href}
                   onClick={(e) => handleClick(e, item.href)}
                 >

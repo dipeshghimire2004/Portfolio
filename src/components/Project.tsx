@@ -4,68 +4,82 @@ import { MdArrowOutward } from 'react-icons/md';
 import { motion } from 'framer-motion';
 
 const Project: React.FC = () => {
+  const [visibleProjects, setVisibleProjects] = React.useState(3);
+
+  const showMoreProjects = () => {
+    setVisibleProjects((prev) => prev + 3);
+  };
+
+  const showLessProjects = () => {
+    setVisibleProjects(3);
+  };
+
   return (
-    <div id="projects" className="flex flex-col items-center min-h-screen py-16 ">
-      <h1 className="text-3xl md:text-4xl font-bold  bg-clip-text text-green-500 mb-12">
+    <div id="projects" className="flex flex-col items-center min-h-screen py-16 bg-white dark:bg-black/50">
+      <h1 className="text-3xl md:text-5xl font-bold text-brand-green mb-16">
         PROJECTS
       </h1>
 
-      <div className="relative group flex">
-        <div className="flex animate-slide group-hover:animation-paused">
-          {[...PROJECTS, ...PROJECTS].map((project) => (
+      <div className="container mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {PROJECTS.slice(0, visibleProjects).map((project) => (
             <motion.div
               key={project.id}
-              className="relative flex flex-col min-w-[450px] items-center p-2 m-5 justify-center border rounded-xl shadow-xl overflow-hidden transition-all duration-500 group"
-              whileHover={{
-                scale: 1.03,
-                rotateX: 1,
-                rotateY: 1,
-                boxShadow: '0px 15px 25px rgba(0, 0, 0, 0.15)',
-              }}
-              transition={{ type: 'spring', stiffness: 120, damping: 12 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+              className="group relative flex flex-col h-full bg-white dark:bg-brand-dark border border-gray-200 dark:border-gray-800 rounded-lg shadow-sm hover:shadow-lg transition-shadow duration-300"
             >
-              <div className="relative w-full h-80">
+              {/* Image Container */}
+              <div className="relative h-64 overflow-hidden rounded-t-lg">
                 <img
                   src={project.image}
                   alt={project.name}
-                  className="h-full object-cover transition-transform duration-500 hover:scale-110 hover:opacity-45"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                {/* Background image changes on hover */}
-                <div className="absolute inset-0 bg-cover bg-center transition-opacity duration-500 group-hover:opacity-40" style={{ backgroundImage: `url(${project.image})` }}></div>
               </div>
-              <motion.div
-              initial={{ opacity: 0, scale: 0.99 }}
-              whileHover={{ opacity: 1, scale: 1 }}
-              className="absolute flex items-center justify-center p-8 h-full bg-black bg-opacity-50 ">
-                <div className="text-center text-white">
-                  <h1 className="text-2xl font-extrabold border-b-2 shadow-2xl px-4 py-2 rounded-full">
-                    {project.name}
-                  </h1>
-                  <p className="my-6">{project.description}</p>
-                  <motion.a
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 1 }}
-                    whileHover={{ opacity: 1, scale: 1.1 }}
-                    href={project.githubLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="rounded-full bg-white px-4 py-2  hover:bg-gray-300"
-                  >
-                    <div className="flex items-center">
+
+              {/* Content Container - Box Model */}
+              <div className="flex flex-col flex-grow p-6">
+                <h3 className="text-2xl font-bold mb-3 text-brand-green group-hover:text-brand-red transition-colors duration-300">{project.name}</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-6 text-sm line-clamp-4 flex-grow leading-relaxed">{project.description}</p>
+
+                <div className="mt-auto">
+                  {project.githubLink && (
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 bg-brand-green text-white px-5 py-2.5 rounded-md hover:bg-brand-red transition-colors font-medium text-sm shadow-sm"
+                    >
                       <span>View on GitHub</span>
                       <MdArrowOutward />
-                    </div>
-                  </motion.a>
+                    </a>
+                  )}
                 </div>
-              </motion.div>
+              </div>
             </motion.div>
-
-
-
-
-              
           ))}
+        </div>
+
+        <div className="flex justify-center mt-12 gap-4">
+          {visibleProjects < PROJECTS.length && (
+            <button
+              onClick={showMoreProjects}
+              className="px-8 py-3 bg-white border-2 border-brand-green text-brand-green font-bold rounded-lg hover:bg-brand-green hover:text-white transition-all duration-300 shadow-sm"
+            >
+              Show More
+            </button>
+          )}
+          {visibleProjects > 3 && (
+            <button
+              onClick={showLessProjects}
+              className="px-8 py-3 bg-brand-red text-white font-bold rounded-lg hover:bg-red-700 transition-all duration-300 shadow-sm"
+            >
+              Show Less
+            </button>
+          )}
         </div>
       </div>
     </div>

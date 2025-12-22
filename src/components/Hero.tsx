@@ -1,8 +1,8 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import { HERO } from '../constants';
-import hero from '../assets/images/giphy.webp';
-import { useSpring, animated } from '@react-spring/web';
-import { gsap } from "gsap";
+import hero from '../assets/images/coding-study.jpg';
+// import bytespace from "../assets/images/bytespacenepal.png"
+import bytespace from "../assets/images/bytespacenepal.png"
 
 interface HeroData {
   name: string;
@@ -11,133 +11,76 @@ interface HeroData {
 }
 
 const Hero: React.FC = () => {
-  const heroRef = useRef<HTMLDivElement>(null); 
-  useEffect(() => {
-    createCircles(); // Call the function to create animations
-  }, []);
-
-  const createCircles = () => {
-    const heroSection = heroRef.current; 
-
-
-    if (!heroSection) return;
-
-    const circleCount = window.innerWidth > 768 ? 10 : 5; 
-
-    for (let i = 0; i < circleCount; i++) {
-      const circle = document.createElement("div");
-      circle.classList.add("circle");
-      heroSection.appendChild(circle);
-
-      
-      const size = Math.random() * 100 + 10;
-      gsap.set(circle, {
-        width: size,
-        height: size,
-        x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight,
-      });
-
-      // Animate the circles to float up and down
-      gsap.to(circle, {
-        y: "+=100",
-        duration: Math.random() * 3 + 3,
-        repeat: -1,
-        yoyo: true,
-        ease: "power1.inOut",
-      });
-
-      // Rotate the circles
-      gsap.to(circle, {
-        rotation: 360,
-        duration: Math.random() * 5 + 5,
-        // repeat: -1,
-        ease: "linear",
-      });
-    }
-  };
-
   const { name, description, greet }: HeroData = HERO;
 
-
-  const nameAnimation = useSpring({
-    opacity: 1,
-    from: { opacity: 0 },
-    delay: 500,
-  });
-
-  // Hand wave animation
-  const handWave = useSpring({
-    from: { rotate: 0 },
-    to: [{ rotate: -15 }, { rotate: 15 }, { rotate: 0 }],
-    loop: true,
-    config: { duration: 300 },
-  });
-
-  gsap.to(".rectangle", { 
-    duration: 5,
-    x: 600,
-    y:-70,
-    rotation: 0,
-    color: '#8d3dae',
-    repeat:2,
-    yoyo:true,
-    ease:'step(12)'
-  });
-  
-
-
-  // const heroRef = useRef<HTMLDivElement>(null);
-  const textRef = useRef<HTMLHeadingElement>(null);
-
-  useEffect(() => {
-    const timeline = gsap.timeline();
-
-    // Animate the container
-    timeline.fromTo(
-      heroRef.current,
-      { opacity: 0 },
-      { opacity: 1, duration: 1 }
-    );
-
-    // Animate the text
-    timeline.fromTo(
-      textRef.current,
-      { y: 30, opacity: 0},
-      { y: 0, opacity: 1, duration: 1, delay: 0.2, color:'#009000' },
-      // {color:'#008000'}
-    );
-  }, []);
-
-
-
-
   return (
-    <section ref={heroRef} id="hero" className="flex min-h-screen flex-wrap items-center px-4">
-      <div className="w-full md:w-1/2">
-      <div className='flex items-center'>
-        <animated.div ref={textRef} style={nameAnimation} className="text-4xl font-bold mb-4 hover:text-5xl hover:duration-500">
-          {name}
-        </animated.div>
-        <div className='rectangle flex items-center '>
-          <p className='text-2xl'>:)</p>
+    <section id="hero" className="flex min-h-screen items-center justify-center bg-white dark:bg-black/20 px-6 lg:px-12 py-20">
+      <div className="container mx-auto flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-12">
+        {/* Left: Text Content */}
+        <div className="w-full lg:w-3/2 flex flex-col items-start text-left">
+
+          <div className='flex flex-col items-start text-left'>
+            <h2 className="text-xl md:text-2xl font-bold text-brand-green tracking-wide uppercase">
+              {name}
+            </h2>
+            <h1 className="text-3xl md:text-2xl font-extrabold text-brand-dark dark:text-white leading-tight mb-6">
+              {greet}
+            </h1>
+
+
+          </div>
+          <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8 max-w-2xl">
+            {description}
+          </p>
+
+          <div className="flex flex-wrap gap-4">
+            <a href="#projects" className="px-8 py-3.5 bg-brand-green text-white font-semibold rounded-lg shadow-md hover:bg-brand-red transition-all transform hover:-translate-y-1">
+              View Projects
+            </a>
+            <a href="#contact" className="px-8 py-3.5 border-2 border-gray-300 dark:border-gray-700 text-brand-dark dark:text-white font-semibold rounded-lg hover:border-brand-green hover:text-brand-green transition-all">
+              Contact Me
+            </a>
+
+            {/* Optional Resume Button in Hero as well */}
+            {/* <a href={Resume} download className="...">Resume</a> */}
+            {/* Keeping it simple as requested: "Projects" and "Contact" are primary, Resume is in Navbar usually but requested here too */}
+          </div>
+        </div>
+
+        {/* Right: Visuals */}
+        <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-end gap-8">
+          {/* Profile Image - Circle & Colorful */}
+          <div className="relative w-64 h-64 lg:w-80 lg:h-80 rounded-full overflow-hidden shadow-lg border-4 border-white dark:border-brand-dark">
+            <img
+              src={hero}
+              alt="Dipesh Ghimire"
+              className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
+            />
+          </div>
+
+          {/* Website Showcase Card */}
+          <a
+            href="https://bytespacenepal.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all border border-gray-100 dark:border-gray-700 max-w-sm w-full"
+          >
+            <div className="w-16 h-16 rounded-lg overflow-hidden flex-shrink-0 bg-gray-900">
+              {/* Using ecommercewebsiste.png as a placeholder for the website preview */}
+              <img src={bytespace} alt="ByteSpaceNepal" className="w-full h-full object-contain" />
+            </div>
+            <div className="flex flex-col">
+              <h3 className="text-brand-dark dark:text-white font-bold text-sm group-hover:text-brand-green transition-colors">ByteSpaceNepal</h3>
+              <p className="text-xs text-gray-500 dark:text-gray-400">Visit my official website</p>
+            </div>
+            <div className="ml-auto text-brand-green">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 group-hover:translate-x-1 transition-transform">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+              </svg>
+            </div>
+          </a>
         </div>
       </div>
-        <div className="font-poppins mb-4">
-          {greet}
-          <animated.span style={handWave} className="inline-block ml-2 text-4xl">👋🏻</animated.span>
-        </div>
-        <div className="mb-8">{description}</div>
-        
-      </div>
-      <div className="w-full md:w-1/2 px-4">
-        <img
-          className="w-full rounded-full px-5 h-auto max-h-96 object-cover"
-          src={hero}
-          alt="Person coding at a desk"
-        />
-      </div>
-      
     </section>
   );
 };
