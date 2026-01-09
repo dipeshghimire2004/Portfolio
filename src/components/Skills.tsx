@@ -20,7 +20,6 @@ const Skills: React.FC = () => {
             initial="hidden"
             whileInView={"visible"}
             variants={containerVarient}
-            // viewport={{once:true}}
 
             className="container mx-auto mt-4" id="skills">
             <h2 className="text-4xl flex justify-center md:text-5xl font-bold text-brand-green mb-16">

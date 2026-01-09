@@ -21,7 +21,6 @@ const EducationSection = () => {
       initial="hidden"
       whileInView={"visible"}
       variants={containerVarient}
-      // viewport={{once:true}}
 
       className='pt-20' id='education'>
       <h1 className="text-2xl md:text-5xl flex justify-center text-center font-bold text-brand-green mb-16">Education </h1>

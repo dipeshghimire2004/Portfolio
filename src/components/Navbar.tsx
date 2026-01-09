@@ -3,7 +3,6 @@ import { NAVIGATION_LINKS } from "../constants";
 import DGlogo from "../assets/images/logodg.png";
 import { TiThMenu } from "react-icons/ti";
 import useDarkMode from "./hooks/useDarkMode";
-// import Resume from "../assets/DipeshGhimireCV.pdf";
 import Resume from "../assets/Dipesh_Ghimire_CV.pdf";
 import { BsDownload } from "react-icons/bs";
 

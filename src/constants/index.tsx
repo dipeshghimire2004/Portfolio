@@ -12,9 +12,6 @@ import { BiLogoJava } from "react-icons/bi";
 import { TbBrandTypescript } from "react-icons/tb";
 import { FaAws } from "react-icons/fa";
 
-// Placeholder images - using existing ones temporarily or generic placeholders if available
-// In a real scenario, we would ask for new project images. 
-// For now, mapping to existing imports where possible or leaving generic.
 import taskmanagement from "../assets/images/taskman2.webp";
 import doctorappointment from "../assets/images/doctotappointment.webp";
 import todo from "../assets/images/todo.jpg";
@@ -56,7 +53,7 @@ export const PROJECTS = [
     description:
       "Developed a travel management system with Spring Boot and containerized it using Docker. Integrated AWS services with LocalStack for local development.",
     image: taskmanagement,
-    githubLink: "",
+    githubLink: "https://github.com/dipeshghimire2004/EasyTrip",
   },
   {
     id: 3,
@@ -72,7 +69,7 @@ export const PROJECTS = [
     description:
       "This project is a full-stack project, Django + ReactJS with typescript and Tailwind CSS to manage the task and ensure its completion within given time.",
     image: taskmanagement,
-    githubLink: "",
+    githubLink: "https://github.com/dipeshghimire2004/Task-Management",
   },
   {
     id: 5,
@@ -112,7 +109,7 @@ export const PROJECTS = [
     description:
       "A personal portfolio website built with React and Tailwind CSS to showcase my skills, projects, and contact information.",
     image: portfolio,
-    githubLink: "",
+    githubLink: "https://github.com/dipeshghimire2004/Portfolio",
   },
   {
     id: 10,
@@ -162,7 +159,7 @@ export const SKILLS = [
     experience: "1+ years",
   },
   {
-    icon: <SiNextdotjs className="text-4xl text-white lg:text-5xl" />,
+    icon: <SiNextdotjs className="text-4xl text-black dark:text-white lg:text-5xl" />,
     name: "Next.js",
     experience: "Intermediate",
   },

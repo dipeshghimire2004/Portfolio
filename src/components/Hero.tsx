@@ -1,7 +1,6 @@
 import React from 'react';
 import { HERO } from '../constants';
 import hero from '../assets/images/coding-study.jpg';
-// import bytespace from "../assets/images/bytespacenepal.png"
 import bytespace from "../assets/images/bytespacenepal.png"
 
 interface HeroData {
