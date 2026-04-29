@@ -1,8 +1,15 @@
 
-import { EDUCATION } from '../constants'
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const EducationSection = () => {
+  const { t } = useTranslation();
+  const education = t('education.items', { returnObjects: true }) as Array<{
+    degree: string;
+    institution: string;
+    duration: string;
+    description: string;
+  }>;
 
   const containerVarient = {
     hidden: { opacity: 0, y: 20 },
@@ -23,9 +30,9 @@ const EducationSection = () => {
       variants={containerVarient}
 
       className='pt-20' id='education'>
-      <h1 className="text-2xl md:text-5xl flex justify-center text-center font-bold text-brand-green mb-16">Education </h1>
+      <h1 className="text-2xl md:text-5xl flex justify-center text-center font-bold text-brand-green mb-16">{t('education.title')}</h1>
       <div className="space-y-8 p-10">
-        {EDUCATION.map((edu, index) => (
+        {education.map((edu, index) => (
           <motion.div
             variants={itemsVarient}
             key={index} className='border border-stone-200 dark:border-stone-800 rounded-lg p-8 hover:shadow-lg transition-shadow bg-white dark:bg-brand-dark'>

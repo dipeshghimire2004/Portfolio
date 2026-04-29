@@ -23,12 +23,12 @@ import tweet from '../assets/images/tweet.webp';
 
 
 export const NAVIGATION_LINKS = [
-  { label: "Projects", href: "#projects" },
-  { label: "Bio", href: "#bio" },
-  { label: "Skills", href: "#skills" },
-  { label: "Work Experience", href: "#work" },
-  { label: "Education", href: "#education" },
-  { label: "Contact", href: "#contact" },
+  { label: "Projects", href: "#projects", key: "projects" },
+  { label: "Bio", href: "#bio", key: "bio" },
+  { label: "Skills", href: "#skills", key: "skills" },
+  { label: "Work Experience", href: "#work", key: "work" },
+  { label: "Education", href: "#education", key: "education" },
+  { label: "Contact", href: "#contact", key: "contact" },
 ];
 
 export const HERO = {

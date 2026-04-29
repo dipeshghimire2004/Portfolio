@@ -4,6 +4,7 @@ import { Toaster, toast } from 'react-hot-toast';
 import emailjs from 'emailjs-com';
 import { BsSendFill } from "react-icons/bs";
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 interface IFormInput {
   name: string;
@@ -12,6 +13,7 @@ interface IFormInput {
 }
 
 const Contact: React.FC = () => {
+  const { t } = useTranslation();
   const {
     register,
     handleSubmit,
@@ -64,7 +66,7 @@ const Contact: React.FC = () => {
       id="contact" className="p-8 lg:w-1/2 w-full mx-auto border border-stone-200 dark:border-stone-800 bg-white dark:bg-brand-dark rounded-xl flex flex-col items-center justify-center shadow-md">
       <Toaster position="top-center" reverseOrder={false} />
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-brand-green mb-8">
-        Contact Us
+        {t('contact.title')}
       </h1>
       <form onSubmit={handleSubmit(onSubmit)} className="w-full">
 
@@ -76,7 +78,7 @@ const Contact: React.FC = () => {
               {...register('name', { required: 'Name is required', maxLength: 20 })}
               className={`w-full bg-transparent border border-stone-50/30 rounded-xl px-4 py-3 focus:outline-none ${errors.name ? 'border-red-500' : 'border-gray-300'
                 }`}
-              placeholder="Enter your name"
+              placeholder={t('contact.name')}
             />
             {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name.message}</p>}
           </div>
@@ -94,7 +96,7 @@ const Contact: React.FC = () => {
               })}
               className={`w-full bg-transparent border border-stone-50/30 rounded-xl px-4 py-3 focus:outline-none ${errors.email ? 'border-red-500' : 'border-gray-300'
                 }`}
-              placeholder="Enter your email"
+              placeholder={t('contact.emailPlaceholder')}
             />
             {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email.message}</p>}
           </div>
@@ -107,7 +109,7 @@ const Contact: React.FC = () => {
             className={`w-full bg-transparent border border-stone-50/30 rounded-xl p-4 focus:outline-none ${errors.feedback ? 'border-red-500' : 'border-gray-300'
               }`}
             rows={4}
-            placeholder="Enter your feedback"
+            placeholder={t('contact.message')}
           ></textarea>
           {errors.feedback && <p className="text-red-500 text-sm mt-1">{errors.feedback.message}</p>}
         </div>
@@ -118,7 +120,7 @@ const Contact: React.FC = () => {
             }`}
           disabled={isSending}
         >
-          {isSending ? 'Sending...' : 'Send Message'}
+          {isSending ? 'Sending...' : t('contact.sendMessage')}
           <BsSendFill className='inline ml-2' />
         </button>
 

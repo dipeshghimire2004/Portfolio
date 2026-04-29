@@ -2,8 +2,15 @@ import React from 'react';
 import { PROJECTS } from '../constants';
 import { MdArrowOutward } from 'react-icons/md';
 import { motion } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const Project: React.FC = () => {
+  const { t } = useTranslation();
+  const projects = t('projects.items', { returnObjects: true }) as Array<{
+    name: string;
+    description: string;
+  }>;
+  
   const [visibleProjects, setVisibleProjects] = React.useState(3);
 
   const showMoreProjects = () => {
@@ -17,12 +24,12 @@ const Project: React.FC = () => {
   return (
     <div id="projects" className="flex flex-col items-center min-h-screen py-16 bg-white dark:bg-black/50">
       <h1 className="text-3xl md:text-5xl font-bold text-brand-green mb-16">
-        PROJECTS
+        {t('projects.title')}
       </h1>
 
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {PROJECTS.slice(0, visibleProjects).map((project) => (
+          {PROJECTS.slice(0, visibleProjects).map((project, index) => (
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 20 }}
@@ -42,8 +49,8 @@ const Project: React.FC = () => {
 
               {/* Content Container - Box Model */}
               <div className="flex flex-col flex-grow p-6">
-                <h3 className="text-2xl font-bold mb-3 text-brand-green group-hover:text-brand-red transition-colors duration-300">{project.name}</h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-6 text-sm line-clamp-4 flex-grow leading-relaxed">{project.description}</p>
+                <h3 className="text-2xl font-bold mb-3 text-brand-green group-hover:text-brand-red transition-colors duration-300">{projects[index]?.name || project.name}</h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-6 text-sm line-clamp-4 flex-grow leading-relaxed">{projects[index]?.description || project.description}</p>
 
                 <div className="mt-auto">
                   {project.githubLink && (

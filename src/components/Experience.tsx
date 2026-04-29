@@ -1,7 +1,15 @@
-import { EXPERIENCES } from "../constants"
 import { motion } from "framer-motion"
+import { useTranslation } from "react-i18next"
 
 const Experiences: React.FC = () => {
+  const { t } = useTranslation();
+  const experiences = t('experience.items', { returnObjects: true }) as Array<{
+    title: string;
+    company: string;
+    duration: string;
+    description: string;
+  }>;
+
   const containerVarient = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -23,9 +31,9 @@ const Experiences: React.FC = () => {
       viewport={{ once: true }}
 
       className="pt-20 px-4" id="work">
-      <h1 className="text-2xl md:text-5xl flex justify-center text-center font-bold text-brand-green mb-16">Work Experience</h1>
+      <h1 className="text-2xl md:text-5xl flex justify-center text-center font-bold text-brand-green mb-16">{t('experience.title')}</h1>
       <div className="space-y-8 max-w-4xl mx-auto">
-        {EXPERIENCES.map((experience, index) => (
+        {experiences.map((experience, index) => (
           <motion.div
             variants={itemsVarient}
             key={index} className="border border-stone-200 dark:border-stone-800 rounded-lg p-8 hover:shadow-lg transition-shadow bg-white dark:bg-brand-dark">

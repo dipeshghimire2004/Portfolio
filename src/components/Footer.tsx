@@ -1,6 +1,9 @@
 import { SOCIAL_MEDIA_LINKS } from '../constants'
+import { useTranslation } from 'react-i18next'
 
 const Footer = () => {
+  const { t } = useTranslation();
+  
   return (
     <div className=' m-20 '>
         <div className='flex items-center '>
@@ -12,7 +15,7 @@ const Footer = () => {
                 </a>
             ))}
         </div>
-        <p className='mt-8'>&#169;  All rights reserved</p>
+        <p className='mt-8'>&#169; {t('footer.rights')}</p>
     </div>
   )
 }

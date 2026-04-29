@@ -5,10 +5,18 @@ import { TiThMenu } from "react-icons/ti";
 import useDarkMode from "./hooks/useDarkMode";
 import Resume from "../assets/Dipesh_Ghimire_CV.pdf";
 import { BsDownload } from "react-icons/bs";
+import { useTranslation } from "react-i18next";
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const { t, i18n } = useTranslation();
+
+  const toggleLanguage = () => {
+    const newLang = i18n.language === 'en' ? 'ne' : 'en';
+    i18n.changeLanguage(newLang);
+    localStorage.setItem('language', newLang);
+  };
 
   const toggleMobileMenu = () => {
     setIsOpen(!isOpen);
@@ -39,6 +47,12 @@ const Navbar: React.FC = () => {
       <div className="flex max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center gap-6 h-14">
           <button onClick={toggleDarkMode}>{isDarkMode ? "🌙" : "🔆"}</button>
+          <button 
+            onClick={toggleLanguage}
+            className="text-sm font-medium px-3 py-1 rounded-md bg-gray-100 dark:bg-gray-800 hover:bg-brand-green hover:text-white transition-colors duration-300"
+          >
+            {i18n.language === 'en' ? 'नेपाली' : 'EN'}
+          </button>
 
           <div>
             <a href="#">
@@ -55,7 +69,7 @@ const Navbar: React.FC = () => {
                     href={item.href}
                     onClick={(e) => handleClick(e, item.href)}
                   >
-                    {item.label}
+                    {t(`nav.${item.key}`)}
                   </a>
                 </li>
               ))}
@@ -63,7 +77,7 @@ const Navbar: React.FC = () => {
           </div>
           <div className="flex items-center bg-brand-green text-white rounded-lg gap-2 px-6 py-2 hover:bg-brand-red transition-colors duration-300 shadow-sm">
             <a href={Resume} download className="button font-medium">
-              Resume
+              {t('nav.resume')}
             </a>
             <BsDownload />
           </div>
@@ -92,7 +106,7 @@ const Navbar: React.FC = () => {
                   href={item.href}
                   onClick={(e) => handleClick(e, item.href)}
                 >
-                  {item.label}
+                  {t(`nav.${item.key}`)}
                 </a>
               </li>
             ))}

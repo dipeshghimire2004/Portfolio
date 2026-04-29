@@ -1,16 +1,10 @@
 import React from 'react';
-import { HERO } from '../constants';
 import hero from '../assets/images/coding-study.jpg';
 import bytespace from "../assets/images/bytespacenepal.png"
-
-interface HeroData {
-  name: string;
-  description: string;
-  greet: string;
-}
+import { useTranslation } from 'react-i18next';
 
 const Hero: React.FC = () => {
-  const { name, description, greet }: HeroData = HERO;
+  const { t } = useTranslation();
 
   return (
     <section id="hero" className="flex min-h-screen items-center justify-center bg-white dark:bg-black/20 px-6 lg:px-12 py-20">
@@ -20,24 +14,24 @@ const Hero: React.FC = () => {
 
           <div className='flex flex-col items-start text-left'>
             <h2 className="text-xl md:text-2xl font-bold text-brand-green tracking-wide uppercase">
-              {name}
+              {t('hero.name')}
             </h2>
             <h1 className="text-3xl md:text-2xl font-extrabold text-brand-dark dark:text-white leading-tight mb-6">
-              {greet}
+              {t('hero.greet')}
             </h1>
 
 
           </div>
           <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8 max-w-2xl">
-            {description}
+            {t('hero.description')}
           </p>
 
           <div className="flex flex-wrap gap-4">
             <a href="#projects" className="px-8 py-3.5 bg-brand-green text-white font-semibold rounded-lg shadow-md hover:bg-brand-red transition-all transform hover:-translate-y-1">
-              View Projects
+              {t('hero.viewProjects')}
             </a>
             <a href="#contact" className="px-8 py-3.5 border-2 border-gray-300 dark:border-gray-700 text-brand-dark dark:text-white font-semibold rounded-lg hover:border-brand-green hover:text-brand-green transition-all">
-              Contact Me
+              {t('hero.contactMe')}
             </a>
 
             {/* Optional Resume Button in Hero as well */}
@@ -70,7 +64,7 @@ const Hero: React.FC = () => {
             </div>
             <div className="flex flex-col">
               <h3 className="text-brand-dark dark:text-white font-bold text-sm group-hover:text-brand-green transition-colors">ByteSpaceNepal</h3>
-              <p className="text-xs text-gray-500 dark:text-gray-400">Visit my official website</p>
+              <p className="text-xs text-gray-500 dark:text-gray-400">{t('hero.visitWebsite')}</p>
             </div>
             <div className="ml-auto text-brand-green">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-5 h-5 group-hover:translate-x-1 transition-transform">
