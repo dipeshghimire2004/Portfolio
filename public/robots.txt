@@ -1,0 +1,9 @@
+# Allow all crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://dipeshghimire.com.np/sitemap.xml
+
+# Crawl-delay for good measure
+Crawl-delay: 10
