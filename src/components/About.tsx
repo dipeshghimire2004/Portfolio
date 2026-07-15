@@ -29,7 +29,7 @@ const About: React.FC = () => {
               <img
                 src={myphoto}
                 alt="Profile"
-                className="w-full h-auto rounded-lg object-cover grayscale-0 hover:grayscale transition-all"
+                className="w-full h-auto rounded-lg object-cover transition-all duration-500 hover:scale-[1.03] hover:brightness-110 hover:drop-shadow-[0_0_18px_rgba(34,197,94,0.45)]"
               />
               <div className="p-4 text-center">
                 <h3 className="text-xl font-bold text-brand-dark dark:text-white">Dipesh Ghimire</h3>

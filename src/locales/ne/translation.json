@@ -1,145 +1,141 @@
 {
   "nav": {
-    "projects": "मेरा कामहरू",
-    "bio": "मेरो कथा",
-    "skills": "दक्षता",
-    "work": "अनुभव यात्रा",
-    "education": "शैक्षिक पृष्ठभूमि",
-    "contact": "कुराकानी गरौं",
-    "resume": "रिज्युमे डाउनलोड"
+    "projects": "काम हेर्नुस्",
+    "bio": "मेरो बारेमा",
+    "skills": "सीपहरू",
+    "work": "अनुभव",
+    "education": "पढाई",
+    "contact": "सम्पर्क गर्नुस्",
+    "resume": "CV डाउनलोड"
   },
   "hero": {
     "name": "दिपेश घिमिरे",
-    "greet": "ब्याकएन्ड विशेषज्ञ र फुल-स्ट्याक इन्जिनियर",
-    "description": "शक्तिशाली, सुरक्षित र उत्कृष्ट प्रणाली निर्माणमा समर्पित। कोड मात्र होइन, समाधान सिर्जना गर्छु।",
-    "viewProjects": "मेरा कामहरू हेर्नुहोस्",
-    "contactMe": "कुराकानी सुरु गरौं",
-    "visitWebsite": "मेरो आधिकारिक वेबसाइट भ्रमण गर्नुहोस्"
+    "greet": "ब्याकएन्ड इन्जिनियर • फुल-स्ट्याक डेभलपर",
+    "description": "राम्रो backend बनाउनु भनेको सिर्फ code लेख्नु होइन — सही architecture छान्नु, performance सोच्नु, र production मा सुरक्षित राख्नु हो।",
+    "viewProjects": "काम हेर्नुस्",
+    "contactMe": "कुरा गरौं",
+    "visitWebsite": "मेरो वेबसाइट हेर्नुस्"
   },
   "bio": {
-    "title": "मेरो यात्रा",
+    "title": "मेरो बारेमा",
     "paragraphs": [
-      "म एक ब्याकएन्ड विशेषज्ञ हुँ जसलाई स्केलेबल, सुरक्षित र दीर्घकालीन प्रणाली निर्माण गर्न मन पर्छ। प्रविधि मात्र होइन, समस्याको दिगो समाधान खोज्छु।",
-      "Java, Spring Boot र PostgreSQL मा मेरो मुख्य विशेषज्ञता छ। स्वच्छ कोड आर्किटेक्चर, API डिजाइन र production-ready ब्याकएन्ड प्रणाली निर्माणमा गहिरो अनुभव छ।",
-      "ब्याकएन्डको साथसाथै, React र Next.js मा पनि राम्रो पकड छ। यसले मलाई आवश्यक परेमा फुल-स्ट्याक इन्जिनियरको रूपमा प्रभावकारी रूपमा काम गर्न सक्षम बनाउँछ।",
-      "विकासभन्दा बाहिर, DevOps समुदायको नेतृत्व गरेको छु, साथीहरूलाई मार्गदर्शन दिएको छु। Docker, CI/CD र deployment workflows मा सक्रिय योगदान गर्दै टोलीलाई छिटो र विश्वसनीय सफ्टवेयर डेलिभर गर्न मद्दत गर्छु।",
-      "जटिल इन्जिनियरिङ चुनौतीहरू समाधान गर्न र प्रणालीको प्रदर्शन, विश्वसनीयता र developer experience लाई निरन्तर सुधार गर्न मलाई आनन्द आउँछ।"
+      "म Java (Spring Boot) मा production अनुभव भएको backend engineer हुँ। Scalable REST API, JWT auth with RBAC, Redis, virtual threads र Docker — यिनै कुराहरू मेरो रोज्नको कारण पनि हो।",
+      "Next.js र React मा पनि full-stack गर्छु। Tech Trishana मा सामेल भएको केही हप्तामै intern बाट junior developer मा promote भएँ — छिटो सिक्ने र राम्रो काम गर्ने बानी छ मेरो।",
+      "हेराल्ड कलेजमा DevOps Pioneer Community को lead हुँ, जहाँ साथीहरूलाई containerization, CI/CD र automation सिकाउँदै २.५ महिनाको DevFest पूरा गरेँ।"
     ]
   },
   "projects": {
-    "title": "मेरा कामहरू",
+    "title": "काम हेर्नुस्",
     "items": [
       {
-        "name": "कार्यशाला ट्र्याकिङ प्रणाली",
-        "description": "Next.js र TypeScript प्रयोग गरी कलेज पोर्टलको लागि शैक्षिक असाइनमेन्ट ट्र्याकिङ प्रणाली निर्माण। ग्लोबल स्टेट म्यानेजमेन्ट, API एकीकरण र फ्रन्टएन्ड प्रदर्शन अनुकूलन गरियो।"
+        "name": "डेन्टल क्लिनिक व्यवस्थापन",
+        "description": "Spring Boot र Next.js मा बनाएको full-stack clinic system। Appointment booking, बिरामीको उपचार record, र revenue tracking सब एकैठाउँमा। Admin, dentist र reception को लागि अलग-अलग role-based API, optimized PostgreSQL schema।"
       },
       {
-        "name": "इजी ट्रिप",
-        "description": "Spring Boot मा यात्रा व्यवस्थापन प्रणाली विकसित गरी Docker मार्फत containerize गरियो। स्थानीय विकासको लागि LocalStack सँग AWS सेवाहरू एकीकृत गरियो।"
+        "name": "खेत बारी",
+        "description": "नेपालको कृषि बजारको समस्या हल गर्न बनाएको full-stack marketplace। Passkey/WebAuthn authentication, Redis caching, Minio storage — heavy traffic मा पनि नढल्ने गरी build गरेको।"
       },
       {
         "name": "HATES Global",
-        "description": "चलिरहेको टोली परियोजना। प्रदर्शन र स्केलेबिलिटीमा केन्द्रित production-grade प्रणालीमा योगदान। Virtual threads, indexing र उन्नत JPA अनुकूलन लागू गर्दै।"
+        "description": "टिमसँग मिलेर बनाएको production-grade backend। Virtual threads, smart indexing र JPA optimization — एकैपटक धेरै request आउँदा पनि system slow नहोस् भनेर काम गरेको।"
       },
       {
-        "name": "कार्य व्यवस्थापन प्रणाली",
-        "description": "Django र ReactJS (TypeScript) सँग Tailwind CSS प्रयोग गरी निर्मित फुल-स्ट्याक परियोजना। कार्य व्यवस्थापन र समयमै पूर्णता सुनिश्चित गर्ने प्रणाली।"
+        "name": "Workshop Tracking System",
+        "description": "हेराल्ड कलेजको लागि Next.js र TypeScript मा बनाएको workshop tracking system। API integration र state management गरेँ, राम्रो काम भएकोले कलेजबाट Letter of Recommendation पनि पाएँ।"
       },
       {
-        "name": "डाक्टर अपोइन्टमेन्ट प्रणाली",
-        "description": "React.js मा निर्मित डाक्टर अपोइन्टमेन्ट बुकिङ प्रणाली। बिरामीहरूलाई सजिलै अपोइन्टमेन्ट तालिका, परिवर्तन वा रद्द गर्न सक्ने सुविधा।"
+        "name": "Easy Trip",
+        "description": "Spring Boot मा travel management system बनाएर Docker मा containerize गरेँ। AWS services हरू LocalStack सँग connect गरी local development पनि production जस्तै बनाएँ।"
+      },
+      {
+        "name": "Task Management System",
+        "description": "Django र React.js (TypeScript) मा बनाएको full-stack project। काम assign गर्न, deadline track गर्न र टिम coordination को लागि।"
+      },
+      {
+        "name": "Doctor Appointment System",
+        "description": "React.js मा बनाएको appointment booking app। बिरामीले आफैँ doctor छान्न, appointment लिन र हेरफेर गर्न सक्छन्।"
       },
       {
         "name": "हाम्रो सेवा",
-        "description": "React र TypeScript मा निर्मित ई-कमर्स एप्लिकेसन। प्रमाणीकरण प्रणाली र Redux सँग कुशल कार्य ट्र्याकिङ र टोली सहयोग।"
+        "description": "React र TypeScript मा बनाएको e-commerce app। Authentication र Redux state management सहित clean, fast interface।"
       },
       {
-        "name": "मौसम एप",
-        "description": "OpenWeatherMap API प्रयोग गरी विभिन्न स्थानको हालको मौसम र पूर्वानुमान देखाउने एप। JavaScript र CSS मा निर्मित।"
+        "name": "मौसम हेर्नुस्",
+        "description": "OpenWeatherMap API प्रयोग गरी जुनसुकै ठाउँको हालको मौसम र forecast देखाउने app। JavaScript र CSS मा सिम्पल तर काम लाग्ने।"
       },
       {
-        "name": "मेरो ब्लग एप",
-        "description": "React र Appwrite प्रयोग गरी निर्मित ब्लग एप। Tailwind CSS सँग responsive डिजाइन र Rich-Text-Editor मार्फत ब्लग पोस्ट गर्न सकिने।"
+        "name": "मेरो ब्लग",
+        "description": "React र Appwrite मा बनाएको blog app। Rich Text Editor मा लेख्नुस्, Tailwind CSS ले responsive design — पढ्न र लेख्न दुवै सजिलो।"
       },
       {
-        "name": "व्यक्तिगत पोर्टफोलियो",
-        "description": "React र Tailwind CSS मा निर्मित व्यक्तिगत पोर्टफोलियो वेबसाइट। मेरो सीप, परियोजना र सम्पर्क जानकारी प्रदर्शन गर्ने।"
+        "name": "यो पोर्टफोलियो",
+        "description": "React र Tailwind CSS मा बनाएको मेरो आफ्नै portfolio। सीप, काम र सम्पर्क — सबै एकैठाउँमा।"
       },
       {
-        "name": "टु डु लिस्ट",
-        "description": "React र Redux मा निर्मित कार्य व्यवस्थापन एप। परियोजना बोर्ड र कार्य असाइनमेन्ट जस्ता सुविधा सहित।"
-      },
-      {
-        "name": "हाम्रो ट्वीट",
-        "description": "Django र HTML CSS मा निर्मित फुल-स्ट्याक परियोजना। प्रयोगकर्तालाई पोस्ट सिर्जना र CRUD अपरेशन गर्न सक्ने।"
+        "name": "हाम्रो Tweet",
+        "description": "Django र HTML/CSS मा बनाएको simple social app। Post गर्नुस्, edit गर्नुस्, delete गर्नुस् — basic CRUD सब मिल्छ।"
       }
     ]
   },
   "skills": {
-    "title": "मेरो दक्षता",
+    "title": "मेरो सीपहरू",
     "experience": {
-      "advanced": "उन्नत",
-      "intermediate": "मध्यवर्ती",
+      "advanced": "उस्तो राम्रो",
+      "intermediate": "राम्रो",
       "years": "वर्ष+"
     }
   },
   "experience": {
-    "title": "अनुभव यात्रा",
+    "title": "काम गरेको ठाउँहरू",
     "items": [
       {
-        "title": "जुनियर Java डेभलपर",
-        "company": "टेक त्रिशना, काठमाडौं",
-        "duration": "अप्रिल २०२५ - हालसम्म",
-        "description": "Spring Boot मा मुख्य ब्याकएन्ड सेवाहरू विकसित र मर्मत। JWT-आधारित प्रमाणीकरणसहित सुरक्षित REST API डिजाइन र लागू। Docker र GitHub Actions मार्फत containerization र स्वचालित CI/CD पाइपलाइन व्यवस्थापन।"
+        "title": "Junior Java Developer",
+        "company": "Tech Trishana, काठमाडौं",
+        "duration": "अप्रिल २०२५ – मार्च २०२६",
+        "description": "Spring Boot मा backend services बनाएँ र maintain गरेँ। JWT + RBAC सहित secure REST API design गरेँ। Docker र GitHub Actions ले CI/CD automate गरेँ। Frontend टिमसँग मिलेर API contract define गर्दै seamless integration सुनिश्चित गरेँ।"
       },
       {
-        "title": "फ्रन्टएन्ड डेभलपर",
-        "company": "टेक त्रिशना, काठमाडौं",
-        "duration": "जनवरी २०२५ - अप्रिल २०२५",
-        "description": "छिटो सीप वृद्धि र योगदानको कारण हप्ताहरूमै इन्टर्नबाट जुनियर डेभलपरमा पदोन्नति। Next.js (TypeScript) र Tailwind CSS मा responsive इन्टरफेस निर्माण।"
+        "title": "Frontend Developer (Intern → Junior)",
+        "company": "Tech Trishana, काठमाडौं",
+        "duration": "जनवरी २०२५ – अप्रिल २०२५",
+        "description": "छिटो सिकेर राम्रो काम गरेकोले केही हप्तामै intern बाट junior मा promote भएँ। Next.js, TypeScript र Tailwind CSS मा production-level UI बनाएँ र frontend-backend कसरी जोडिन्छ राम्रोसँग बुझेँ।"
       },
       {
-        "title": "जुनियर फ्रन्टएन्ड डेभलपर",
-        "company": "हेराल्ड कलेज काठमाडौं",
-        "duration": "जुन २०२४ - अगस्ट २०२४",
-        "description": "React.js, Tailwind CSS, Shadcn र Next.js मा व्यावहारिक अनुभव। प्रयोगकर्ता-मैत्री इन्टरफेस निर्माण र टोली सहयोगमा सक्रिय योगदान।"
-      },
-      {
-        "title": "सहायक सेवा प्रदायक",
-        "company": "हाई-स्पीड / अन-द-जब ट्रेनिङ",
-        "duration": "जुन २०२२ - अगस्ट २०२२",
-        "description": "परिचालन दक्षता समर्थनको लागि हार्डवेयर उपकरण र नेटवर्किङ प्रणाली मर्मत।"
+        "title": "Junior Frontend Developer",
+        "company": "Herald College Kathmandu",
+        "duration": "जुन २०२४ – अगस्ट २०२४",
+        "description": "Workshop Tracking System मा काम गरेँ र कलेजबाट Letter of Recommendation पाएँ। Next.js, Tailwind CSS र ShadCN UI मा mobile-first responsive interfaces बनाएँ।"
       }
     ]
   },
   "education": {
-    "title": "शैक्षिक पृष्ठभूमि",
+    "title": "पढाई",
     "items": [
       {
-        "degree": "BSc (Hons) कम्प्युटर विज्ञान",
-        "institution": "युनिभर्सिटी अफ वोल्भरह्याम्प्टन / हेराल्ड कलेज काठमाडौं",
-        "duration": "सेप्टेम्बर २०२४ - हालसम्म",
-        "description": "Java, Python, Django, React, Next.js, TypeScript र AWS मा वेब र ब्याकएन्ड विकासमा केन्द्रित।"
+        "degree": "BSc (Hons.) Computer Science",
+        "institution": "University of Wolverhampton / Herald College Kathmandu",
+        "duration": "सेप्टेम्बर २०२४ – जुन २०२६",
+        "description": "Advanced Java र Python, PostgreSQL, AWS Cloud Computing, र Web Architecture — मलाई सबैभन्दा मन पर्ने subjects।"
       },
       {
-        "degree": "DevOps पायोनियर समुदाय नेता",
-        "institution": "हेराल्ड कलेज काठमाडौं",
-        "duration": "भर्खरै पूरा",
-        "description": "Containerization, CI/CD र automation उत्तम अभ्यासहरू समेट्ने DevOps सत्र सञ्चालन। प्राविधिक प्रदर्शन आयोजना।"
+        "degree": "DevOps Pioneer Community — Leader",
+        "institution": "Herald College Kathmandu",
+        "duration": "मे २०२५ – अहिलेसम्म",
+        "description": "साथीहरूलाई Docker, CI/CD र automation सिकाउँदै २.५ महिनाको DevFest program lead गरेँ। सिक्नु र सिकाउनु — दुवैमा मज्जा आउँछ।"
       }
     ]
   },
   "contact": {
-    "title": "कुराकानी गरौं",
-    "getInTouch": "सम्पर्कमा रहनुहोस्",
-    "description": "सहकार्य वा मैत्रीपूर्ण कुराकानीको लागि स्वतन्त्र महसुस गर्नुहोस्।",
+    "title": "कुरा गरौं",
+    "getInTouch": "सम्पर्क गर्नुस्",
+    "description": "कुनै project छ, collaboration गर्ने छ, वा खाली कुरा गर्ने छ — जस्तोसुकै भए पनि message पठाउनुस्।",
     "email": "इमेल",
     "phone": "फोन",
     "address": "ठेगाना",
-    "sendMessage": "सन्देश पठाउनुहोस्",
-    "name": "नाम",
+    "sendMessage": "Message पठाउनुस्",
+    "name": "तपाईंको नाम",
     "emailPlaceholder": "तपाईंको इमेल",
-    "message": "सन्देश"
+    "message": "के भन्न खोज्नुभएको?"
   },
   "footer": {
     "rights": "सबै अधिकार सुरक्षित।"

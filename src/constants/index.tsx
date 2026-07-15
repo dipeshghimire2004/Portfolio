@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa6";
 
 import { RiReactjsLine } from "react-icons/ri";
-import { SiPostgresql, SiNextdotjs, SiDocker } from "react-icons/si";
+import { SiPostgresql, SiNextdotjs, SiDocker, SiRedis, SiSpring } from "react-icons/si";
 import { BiLogoJava } from "react-icons/bi";
 import { TbBrandTypescript } from "react-icons/tb";
 import { FaAws } from "react-icons/fa";
@@ -33,22 +33,46 @@ export const NAVIGATION_LINKS = [
 
 export const HERO = {
   name: "DIPESH GHIMIRE",
-  greet: "Backend Developer & Full-Stack Engineer",
+  greet: "Backend Engineer & Full-Stack Developer",
   description:
-    "Focused on clean architecture, performance, and production-ready systems.",
+    "Building scalable REST APIs, secure authentication systems, and high-concurrency backend architectures.",
 };
 
 export const PROJECTS = [
   {
     id: 1,
-    name: "Workshop Tracking System",
+    name: "Dental Clinic Management System",
     description:
-      "Built an academic assignment tracking functionality for the college portal using Next.js & TypeScript. Implemented global state management, integrated APIs, and optimized frontend performance.",
-    image: todo,
+      "Full-stack clinic management system built with Spring Boot & Next.js. Handles appointment scheduling, patient treatment records, and time-based revenue tracking. Features normalized PostgreSQL schema with optimized indexing and role-based secure REST APIs for clinic admins, dentists, and reception staff.",
+    image: doctorappointment,
     githubLink: "",
   },
   {
     id: 2,
+    name: "Khet Bari",
+    description:
+      "Production-grade full-stack marketplace targeting Nepal's agricultural market. Implements Passkey/WebAuthn authentication, Redis caching, Minio media storage, virtual threads, and advanced JPA optimizations for high-concurrency handling under heavy traffic.",
+    image: ecommerce,
+    githubLink: "",
+  },
+  {
+    id: 3,
+    name: "HATES Global",
+    description:
+      "Team Project. Contributing to a production-grade backend system focused on high-performance scalable architecture. Implemented virtual threads, indexing strategies, and advanced JPA optimizations to handle concurrent requests efficiently.",
+    image: taskmanagement,
+    githubLink: "",
+  },
+  {
+    id: 4,
+    name: "Workshop Tracking System",
+    description:
+      "Built an academic workshop tracking system for Herald College using Next.js & TypeScript. Implemented global state management, integrated APIs, and optimized frontend performance — received a formal Letter of Recommendation for contributions.",
+    image: todo,
+    githubLink: "",
+  },
+  {
+    id: 5,
     name: "Easy Trip",
     description:
       "Developed a travel management system with Spring Boot and containerized it using Docker. Integrated AWS services with LocalStack for local development.",
@@ -56,55 +80,47 @@ export const PROJECTS = [
     githubLink: "https://github.com/dipeshghimire2004/EasyTrip",
   },
   {
-    id: 3,
-    name: "HATES Global",
-    description:
-      "Ongoing Team Project. Contributing to a production-grade system focused on performance and scalability. Implementing virtual threads, indexing, and advanced JPA optimizations for concurrency handling.",
-    image: doctorappointment,
-    githubLink: "",
-  },
-  {
-    id: 4,
+    id: 6,
     name: "Task Management System",
     description:
-      "This project is a full-stack project, Django + ReactJS with typescript and Tailwind CSS to manage the task and ensure its completion within given time.",
+      "Full-stack project using Django + React.js with TypeScript and Tailwind CSS to manage tasks and ensure completion within deadlines.",
     image: taskmanagement,
     githubLink: "https://github.com/dipeshghimire2004/Task-Management",
   },
   {
-    id: 5,
-    name: "Doctor Appointent System",
+    id: 7,
+    name: "Doctor Appointment System",
     description:
-      "Doctor Appointent Boooking System web application developed using react.js, allows patients to easily schedule, reschedule, or cancel appointments with doctors",
+      "Doctor Appointment Booking System developed with React.js, allowing patients to easily schedule, reschedule, or cancel appointments with doctors.",
     image: doctorappointment,
     githubLink: "https://github.com/dipeshghimire2004/Doctor-Appointment-System",
   },
   {
-    id: 6,
+    id: 8,
     name: "Hamro Sewa",
     description:
-      "E-Commerce application built with React with typescript where it comprise of authentication system, also Redux for efficient task tracking and team collaboration.",
+      "E-Commerce application built with React & TypeScript, featuring an authentication system and Redux for efficient state management and team collaboration.",
     image: ecommerce,
     githubLink: "https://github.com/dipeshghimire2004/Hamro-Sewa",
   },
   {
-    id: 7,
+    id: 9,
     name: "Weather App",
     description:
-      "A weather application that uses the OpenWeatherMap API to fetch and display current weather data and forecasts for various locations, built with Javascript and CSS.",
+      "A weather application that uses the OpenWeatherMap API to fetch and display current weather data and forecasts for various locations, built with JavaScript and CSS.",
     image: weather,
     githubLink: "https://github.com/user/weather-app",
   },
   {
-    id: 8,
-    name: "My-Blog-App",
+    id: 10,
+    name: "My Blog App",
     description:
-      "A blog app using React and Appwrite leverages React for the front end and Appwrite for backend services, and Tailwind CSS for resposive design, allows you to post your blog with Rich-Text-Editor. ",
+      "A blog app using React and Appwrite for backend services, with Tailwind CSS for responsive design. Allows posting blogs with a Rich Text Editor.",
     image: blogapp,
     githubLink: "https://github.com/dipeshghimire2004/My-Blog-App",
   },
   {
-    id: 9,
+    id: 11,
     name: "Personal Portfolio",
     description:
       "A personal portfolio website built with React and Tailwind CSS to showcase my skills, projects, and contact information.",
@@ -112,29 +128,19 @@ export const PROJECTS = [
     githubLink: "https://github.com/dipeshghimire2004/Portfolio",
   },
   {
-    id: 10,
-    name: "To Do List",
-    description:
-      "A task management application built with React and Redux for efficient task tracking and team collaboration, including features like project boards,and task assignment.",
-    image: todo,
-    githubLink: "https://github.com/dipeshghimire2004/To-Do-List",
-  },
-  {
-    id: 11,
+    id: 12,
     name: "Hamro Tweet",
     description:
-      "It is a full-stack project built using Django and HTML CSS. Allow user to create post, and perform crud operation.",
+      "Full-stack project built using Django and HTML/CSS. Allows users to create posts and perform CRUD operations.",
     image: tweet,
     githubLink: "https://github.com/dipeshghimire2004/HamroTweet",
   },
 ];
 
 export const BIO = [
-  "I am a backend-focused developer with a strong interest in designing scalable, secure, and maintainable systems.",
-  "My primary expertise lies in Java with Spring Boot and PostgreSQL, where I focus on clean architecture, API design, and production-grade backend systems.",
-  "Alongside backend development, I have solid experience building modern frontends using React and Next.js, allowing me to collaborate effectively as a full-stack engineer when needed.",
-  "Beyond development, I have led DevOps communities, mentored peers, and actively worked with containerization, CI/CD pipelines, and deployment workflows, helping teams ship reliable software faster.",
-  "I enjoy solving complex engineering problems and continuously improving system performance, reliability, and developer experience."
+  "Backend engineer with production experience in Java (Spring Boot), building scalable REST APIs, JWT-based auth with RBAC, and high-concurrency systems using virtual threads, Redis, and Docker.",
+  "Full-stack capable with Next.js and React. Promoted from intern to junior developer within weeks at Tech Trishana for rapid delivery and consistent quality.",
+  "Community leader of DevOps Pioneer at Herald College, running a 2.5-month DevFest covering containerization, CI/CD, and automation best practices."
 ];
 
 export const SKILLS = [
@@ -144,8 +150,18 @@ export const SKILLS = [
     experience: "Advanced",
   },
   {
+    icon: <SiSpring className="text-4xl text-green-500 lg:text-5xl" />,
+    name: "Spring Security",
+    experience: "Intermediate",
+  },
+  {
     icon: <SiPostgresql className="text-4xl text-blue-600 lg:text-5xl" />,
     name: "PostgreSQL",
+    experience: "Intermediate",
+  },
+  {
+    icon: <SiRedis className="text-4xl text-red-500 lg:text-5xl" />,
+    name: "Redis",
     experience: "Intermediate",
   },
   {
@@ -154,13 +170,13 @@ export const SKILLS = [
     experience: "Intermediate",
   },
   {
-    icon: <RiReactjsLine className="text-4xl text-cyan-400 lg:text-5xl" />,
-    name: "React.js",
-    experience: "1+ years",
-  },
-  {
     icon: <SiNextdotjs className="text-4xl text-black dark:text-white lg:text-5xl" />,
     name: "Next.js",
+    experience: "Intermediate",
+  },
+  {
+    icon: <RiReactjsLine className="text-4xl text-cyan-400 lg:text-5xl" />,
+    name: "React.js",
     experience: "Intermediate",
   },
   {
@@ -179,47 +195,40 @@ export const EXPERIENCES = [
   {
     title: "Junior Java Developer",
     company: "Tech Trishana, Kathmandu",
-    duration: "Apr 2025 - Present",
+    duration: "Apr 2025 – Mar 2026",
     description:
-      "Developed and maintained core backend services using Spring Boot for performance and scalability. Designed and implemented secure REST APIs with JWT-based authentication. Managed containerization and automated CI/CD pipelines using Docker and GitHub Actions.",
+      "Developed and maintained core backend services using Spring Boot, prioritizing high performance, scalability, and clean architecture. Designed and implemented secure REST APIs with JWT-based authentication and role-based access control (RBAC). Containerized applications using Docker and engineered automated CI/CD pipelines via GitHub Actions. Collaborated closely with the frontend team to define clear API contracts and ensure seamless integration.",
   },
   {
-    title: "Frontend Developer",
+    title: "Frontend Developer (Intern → Junior)",
     company: "Tech Trishana, Kathmandu",
-    duration: "Jan 2025 - Apr 2025",
+    duration: "Jan 2025 – Apr 2025",
     description:
-      "Promoted from intern to junior developer within weeks due to fast skill growth and contribution. Built responsive interfaces using Next.js (TypeScript) and Tailwind CSS.",
+      "Promoted from Intern to Junior Developer within weeks due to rapid learning pace and consistent delivery. Built production-ready user interfaces using Next.js, TypeScript, and Tailwind CSS, gaining deep full-stack context on frontend-backend integration.",
   },
   {
     title: "Junior Frontend Developer",
     company: "Herald College Kathmandu",
-    duration: "Jun 2024 - Aug 2024",
+    duration: "Jun 2024 – Aug 2024",
     description:
-      "Gained hands-on experience in React.js, Tailwind CSS, Shadcn, and Next.js to create user-friendly interfaces. Contributed to aligning features with system requirements through active team collaboration.",
-  },
-  {
-    title: "Assistant Service Provider",
-    company: "High-Speed / On-TheJobTraining",
-    duration: "Jun 2022 - Aug 2022",
-    description:
-      "Maintained hardware devices and networking systems to support operational efficiency.",
+      "Contributed to the Workshop Tracking System project and received a formal Letter of Recommendation for high-quality contributions. Built mobile-first, responsive interfaces with Next.js, Tailwind CSS, and ShadCN UI within a collaborative team environment.",
   },
 ];
 
 export const EDUCATION = [
   {
-    degree: "BSc (Hons) Computer Science",
+    degree: "BSc (Hons.) Computer Science",
     institution: "University of Wolverhampton / Herald College Kathmandu",
-    duration: "Sep 2024 - Present",
+    duration: "Sep 2024 – Jun 2026",
     description:
-      "Focused on web and backend development using Java, Python, Django, React, Next.js, TypeScript and AWS.",
+      "Relevant Coursework: Advanced Java & Python, Database Systems (PostgreSQL), Cloud Computing (AWS), Web Development Architecture.",
   },
   {
     degree: "DevOps Pioneer Community Leader",
     institution: "Herald College Kathmandu",
-    duration: "Recently Completed",
+    duration: "May 2025 – Present",
     description:
-      "Conducted DevOps sessions covering containerization, CI/CD, and automation best practices. Organized technical showcases.",
+      "Led a 2.5-month DevFest program, conducting live sessions on containerization, CI/CD pipelines, and automation best practices. Organized technical showcases and mentored peers in DevOps workflows.",
   },
 ];
 
