@@ -11,7 +11,7 @@ RUN npm run build
 
 #Production stage
 FROM nginx:alpine
-WORKDIR /usr/share/ngingx/html
+WORKDIR /usr/share/nginx/html
 
 #clear default static files and Copy compiled build
 RUN rm -rf ./*
@@ -21,4 +21,4 @@ COPY --from=builder /app/dist .
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
-CMD ["nginx"]
+CMD ["nginx", "-g", "daemon off;"]
