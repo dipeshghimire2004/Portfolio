@@ -10,13 +10,13 @@ env:
   IMAGE_NAME: ${{ github.repository}}
 
 jobs:
-  Build-and-push:
-  runs-on: ubuntu-latest
-  permissions:
-    contents: read
-    packages: write
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
 
-  steps:
+    steps:
     - name: Checkout repository
       uses: docker/setup-qemu-action@v3
 
@@ -41,7 +41,7 @@ jobs:
         tags: |
           type=raw, value=latest
 
-    - name: Build and push ARM64 Dockeer image
+    - name: Build and push ARM64 Docker image
       uses: docker/build-push-action@v5
       with:
         context: .
@@ -52,17 +52,17 @@ jobs:
         cache-from: type=gha
         cache-to: type=gha,mode=max
 
-deploy:
-  needs: build-and-push
-  runs-on: ubuntu-latest
-  steps:
+  deploy:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+    steps:
     - name: Trigger deployment on OCI server
       uses: appleboy/ssh-action@v1.0.3
       with:
         host: ${{ secrets.OCI_HOST }}
         username: ${{ secrets.OCI_USERNAME }}
         key: ${{ secrets.OCI_SSH_KEY }}
-        scripts: |
+        script: |
           cd ~/app
           bash scripts/deploy.sh
 
